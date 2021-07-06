@@ -7,12 +7,12 @@ const errCallback = err => {
     console.log(err)
 }
 
-const getAllBooks = () => {
-    axios
-        .post(baseURL)
-        .then(booksCallback)
-        .catch(errCallback)
-}
+// const getAllBooks = () => {
+//     axios
+//         .post(baseURL)
+//         .then(booksCallback)
+//         .catch(errCallback)
+// }
 
 const addBook = body => {
     axios
@@ -72,4 +72,23 @@ document.getElementById('shuffleBtn').onclick = () => {
         .catch(errCallback)
 }
 
-getAllBooks()
+// getAllBooks()
+
+
+document.getElementById('movieBtn').onclick = () => {
+    let search = document.getElementById('movieSearch')
+    let searchText = search.value
+    axios
+        .get(`http://www.omdbapi.com/?apikey=2b23be8b&t=${searchText}`)
+        .then((res) => {
+            let movieTitle = res.data.Title
+            let movieYear = res.data.Year
+            let director = res.data.Director
+            let results = document.getElementById('searchResults')
+            let movieCard = document.createElement('div')
+            movieCard.innerHTML = `MOVIE: ${movieTitle} YEAR: ${movieYear} DIRECTOR: ${director}`
+            results.appendChild(movieCard)
+            // console.log(res.data.Title)
+        })
+        .catch(errCallback)
+}

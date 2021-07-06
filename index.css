@@ -27,3 +27,11 @@ p{
 h1{
     font-family: 'Courier New', Courier, monospace;
 }
+
+aside{
+    margin-top: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#searchResults{
+    margin-top: 15px;
+}
