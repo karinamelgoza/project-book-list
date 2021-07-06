@@ -1,5 +1,5 @@
 const bookListContainer = document.querySelector('#bookListContainer')
-const baseURL = 'https://localhost:5050/booklist'
+const baseURL = 'http://localhost:5050/booklist'
 const bookForm = document.querySelector('#bookForm')
 
 const booksCallback = ({ data: books }) => displayBooks(books)
