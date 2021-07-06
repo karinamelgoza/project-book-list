@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+    background-color:rgb(245, 245, 240);
+}
+
+#bookForm{
+    display: inline;
+}
+
+#bookListContainer{
+    border: teal solid;
+    width: 400px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:'Courier New', Courier, monospace ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.delBtn{
+    display: inline;
+}
+
+p{
+    display: inline;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+}

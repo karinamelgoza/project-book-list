@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h1 id="pageTitle">Book List</h1>
+
+    <form id="bookForm">
+        <input type="text" placeholder="add book title" id="titleText" required>
+        <button id='addBookBtn'>Add Book</button>
+    </form>
+
+    <section id="bookListContainer"></section>
+
+    <section>
+        <button id="shuffleBtn">Pick Random Book</button>
+    </section>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
