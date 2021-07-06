@@ -11,9 +11,9 @@ app.use(express.json())
 app.use(cors())
 
 app.post('/addbook', addBook)
-app.delete('/booklist/:bookId', deleteBook)
+app.delete('/:bookId', deleteBook)
 // app.get('/booklist', getAllBooks)
-app.get('/booklist/shuffle', shuffleBooks)
+app.get('/shuffle', shuffleBooks)
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
