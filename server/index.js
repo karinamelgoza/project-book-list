@@ -22,6 +22,10 @@ app.get('/styles', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.css'))
 })
 
+app.get('/main', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/main.js'))
+})
+
 const serverPort = process.env.PORT || 5050
 app.listen(serverPort, () => {
     console.log(`server up on ${serverPort}`)
