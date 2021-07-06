@@ -10,7 +10,7 @@ const { deleteBook, getAllBooks, addBook, shuffleBooks } = ctrl
 app.use(express.json())
 app.use(cors())
 
-app.post('/booklist/addbook', addBook)
+app.post('/addbook', addBook)
 app.delete('/booklist/:bookId', deleteBook)
 // app.get('/booklist', getAllBooks)
 app.get('/booklist/shuffle', shuffleBooks)
