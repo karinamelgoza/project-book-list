@@ -1,14 +1,14 @@
 const express = require('express')
 const app = express()
 app.use(express.static("public"))
-// const cors = require('cors')
+const cors = require('cors')
 const path = require('path')
 const ctrl = require('./controller')
 
 const { deleteBook, getAllBooks, addBook, shuffleBooks } = ctrl
 
 app.use(express.json())
-// app.use(cors())
+app.use(cors())
 
 app.post('/booklist/addbook', addBook)
 app.delete('/booklist/:bookId', deleteBook)
