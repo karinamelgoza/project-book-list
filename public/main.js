@@ -90,6 +90,9 @@ document.getElementById('movieBtn').onclick = () => {
             movieCard.innerHTML = `MOVIE: ${movieTitle} YEAR: ${movieYear} DIRECTOR: ${director}`
             results.appendChild(movieCard)
             // console.log(res.data.Title)
+
         })
         .catch(errCallback)
+
+    searchText = ''
 }
