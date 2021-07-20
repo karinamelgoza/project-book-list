@@ -27,6 +27,10 @@ app.get('/main', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/main.js'))
 })
 
+app.get('/config', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/config.js'))
+})
+
 const serverPort = process.env.PORT || 5050
 app.listen(serverPort, () => {
     console.log(`server up on ${serverPort}`)

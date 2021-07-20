@@ -80,7 +80,7 @@ document.getElementById('movieBtn').onclick = () => {
     let search = document.getElementById('movieSearch')
     let searchText = search.value
     axios
-        .get(`https://www.omdbapi.com/?apikey=2b23be8b&t=${searchText}`)
+        .get(`https://www.omdbapi.com/?apikey=${config.apikey}=${searchText}`)
         .then((res) => {
             let movieTitle = res.data.Title
             let movieYear = res.data.Year
